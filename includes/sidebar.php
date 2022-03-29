@@ -1,13 +1,28 @@
 <!-- Sidebar -->
 <aside id="sidebar">
+
+    <div id="searcher" class="block-aside" role="searcher"> 
+        <h3>Search</h3>
+
+        <form action="search.php" method="POST">
+            <label for="search">Email:</label>
+            <input type="text" name="search" />
+            <input type="submit" value="Go" />
+        </form>
+    </div>
     <?php if(isset($_SESSION['user'])): ?>   
         <div id="user-loged-in" class="block-aside">
             <h3><?= $_SESSION['user']['Name'].' '.$_SESSION['user']['LastName']; ?></h3>  
             <!-- Buttons  -->
-            <a href="session_close.php" class="button button-post">New Post</a>
-            <a href="./includes/new_category.php" class="button button-category">New Category</a>
-            <a href="session_close.php" class="button button-profile">Profile</a>
-            <a href="session_close.php" class="button button-close">Log Out</a>
+            
+            <a href="new_post.php" class="button button-post" role="button">New Post</a>
+            
+            <?php if($_SESSION['user']['Email'] == "guillem.vtorrent@gmail.com"): ?>
+               <a href="new_category.php" class="button button-category" role="button">Categories</a>
+            <?php endif; ?>
+            
+            <a href="profile.php" class="button button-profile" role="button">Profile</a>
+            <a href="session_close.php" class="button button-close" role="button">Log Out</a>
 
         </div>
     <?php endif; ?>

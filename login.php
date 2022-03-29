@@ -2,7 +2,6 @@
 <?php
 
 // Session start and connection to the database
-
 require_once 'includes/connection.php';
 
 // Get files from the form

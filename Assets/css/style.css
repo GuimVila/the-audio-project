@@ -181,21 +181,25 @@ input[type="submit"],
 }
 
 .button {
-    width: 70px;
+    color: white !important;
+    width: 85px;
     text-align: center;
 }
 
 .button-post {
-  background: #21b921;
-  border-color: green;
+    color: white;
+    background: #21b921;
+    border-color: green;
 }
 
 .button-profile {
-   background: orange;
-   border-color: #bd7d08;
+    color: white;
+    background: orange;
+    border-color: #bd7d08;
 }
 
 .button-close {
+    color: white;
     background: red;
     border-color: #444;
   }
@@ -250,6 +254,11 @@ input[type="submit"],
     width: 60px; 
     margin: 0px auto; 
     margin-top: 70px; 
+}
+
+textarea.post-description-box {
+    width: 60em;
+    height: 20em;
 }
 
 /* FOOTER */

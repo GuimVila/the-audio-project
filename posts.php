@@ -3,9 +3,9 @@
 <?php require_once 'includes/sidebar.php'; ?>
         <!-- MAIN -->
     <main id="main">    
-        <h1>Last Posts</h1>
+        <h1>All Posts</h1>
 
-        <?php $lastPosts = getPosts($db, null, true); 
+        <?php $lastPosts = getPosts($db, null, null, null); 
       
         if(!empty($lastPosts)): 
             while($lastPost = mysqli_fetch_assoc($lastPosts)):  
@@ -22,9 +22,6 @@
         endif; 
         ?>
 
-        <div id="read-all" role="button">
-            <a href="posts.php">Read All</a>
-        </div>  
         </main>
 
-<?php require_once 'includes/footer.php'; ?>
+<?php require_once 'includes/footer.php'; ?>    

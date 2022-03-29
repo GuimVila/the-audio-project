@@ -33,7 +33,7 @@
                     while($category = mysqli_fetch_assoc($categories)):
             ?>
                         <li>
-                            <a href="category.php?=id<?=$category['Id']?>"><?=$category['Name']?></a>    
+                            <a href="category.php?id=<?=$category['Id']?>"><?=$category['Name']?></a>    
                         </li>
             <?php 
                     endwhile; 
