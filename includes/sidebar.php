@@ -5,7 +5,7 @@
         <h3>Search</h3>
 
         <form action="search.php" method="POST">
-            <label for="search">Email:</label>
+            <!-- <label for="search">Email:</label> -->
             <input type="text" name="search" />
             <input type="submit" value="Go" />
         </form>

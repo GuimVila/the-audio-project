@@ -19,13 +19,10 @@
 <!-- MAIN -->
 <main id="main">    
 <h1>Edit Post</h1>
-<p class="post-title">
-    <?=$newPost['Title']?>
-</p>
 
     <form name= "save_post" action="save_post.php?edit=<?=$newPost['Id']?>" method="POST">
         <label for="title" class="post-title-box">Title</label>
-        <input type="text" name="title" />
+        <input type="text" name="title" value="<?=$newPost['Title']?>" />
         <?php echo isset($_SESSION['input_errors']) ? showErrors($_SESSION['input_errors'], 'title') : ""; ?>
 
         <label for="description">Description</label>

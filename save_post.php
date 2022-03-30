@@ -8,7 +8,7 @@ if(isset($_POST)) {
 
     $title = isset($_POST['title']) ? mysqli_real_escape_string($db, $_POST['title']) : false; 
     $getDescription = isset($_POST['description']) ? mysqli_real_escape_string($db, ($_POST['description'])) : false; 
-    $description = str_replace(" ", "", $getDescription);    
+    $description = $getDescription;  
     $category = isset($_POST['category']) ? intVal($_POST['category']) : false; 
     $user = $_SESSION['user']['Id']; 
     $errors = array();  
